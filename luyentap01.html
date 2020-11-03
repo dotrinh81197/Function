@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01
+    </title>
+</head>
+
+<body>
+    <h3> Bài 1: </h3>
+    <input type="button" value="Click me" onclick="alertMessage('Hello')">
+
+    <script>
+        function alertMessage(msg) {
+            alert(msg);
+        }
+    </script>
+    <h3> Bài 2</h3>
+    <input type="number" value="" id="input" oninput="increaseNumber(this.value)" onchange="increaseNumber(this.value)">
+    <span id="outputNumber" value="number"></span>
+    <script>
+        function increaseNumber(number) {
+
+            number++;
+            document.getElementById("outputNumber").innerHTML = number;
+            return number;
+        }
+    </script>
+    <h3> Bài 3: </h3>
+    <input type="button" value="Check" onclick="Check()">
+    <script>
+        function Check(a, b) {
+            a = parseFloat(prompt("Enter a number1:"));
+            b = parseFloat(prompt("Enter a number2:"));
+            if (a > b) {
+                alertMessage("Giá trị của tham số thứ nhất lớn hơn tham số thứ hai")
+
+            } else {
+                alertMessage("Tổng của 2 tham số là: " + (a + b))
+            }
+        }
+    </script>
+    <h3> Bài 4</h3>
+    <input type="button" value="Check result" onclick="result()">
+    <script>
+        function addNumbers() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+
+        function result() {
+            result = 0;
+            alert("result khi chưa chạy hàm: " + result);
+
+            result = addNumbers();
+            alert("result sau khi chạy hàm: " + result);
+        }
+    </script>
+    <h3> Bài 5</h3>
+    <input type="button" value="Find constellation" onclick="findConstellation()">
+    <p id="constellation"> </p>
+    <script>
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellation = ["Ursa Minor", "Tarurus",
+            "Cygnus",
+            "Lyra",
+            "Aquila",
+            "Ursa Major",
+            "Leo"
+        ];
+
+        function findConstellation(str) {
+            str = prompt("Nhập tên ngôi sao");
+            for (i = 0; i < star.length; i++) {
+                if (str == star[i]) {
+                    document.getElementById("constellation").innerHTML = "Chòm sao tương ứng: " + constellation[i];
+                    break;
+
+                } else {
+                    document.getElementById("constellation").innerHTML = "Không có chòm sao tương ứng";
+                }
+
+
+
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>
