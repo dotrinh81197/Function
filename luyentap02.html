@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+
+<body>
+    <h3>Bài 1: Tính bình phương</h3>
+    <input type="number" value="" id="inputNumber" oninput="squareNumber(this.value)" onchange="squareNumber(this.value)" />
+    <p id="result"></p>
+    <h3>Bài 2: Diện tích, Chu vi hình tròn</h3>
+    <input type="number" value="" id="radius" />
+    <input type="button" value="Diện tích" onclick="circleArea(radius)" />
+    <input type="button" value="Chu vi" onclick="circlePerimeter(radius)" />
+    <br />
+    <span id="area"></span> <br />
+    <span id="perimeter"></span>
+    <h3>bài 3 : Giai thừa</h3>
+    <input type="button" value="Input Number" onclick="factorialNumber()" />
+    <p id="factorial"></p>
+    <script src="luyentap02.js"></script>
+    <h3>Bài 4</h3>
+    <input type="button" value="Check Number" onclick="checkNumber()" />
+
+    <h3>Bài 5</h3>
+    <input type="button" value="Input 3 Number" onclick="inputNumber()" />
+    <p id="max"></p>
+    <p id="min"></p>
+    <h3>Bài 6</h3>
+    <input type="button" value="Check Positive Integer" onclick="checkPositiveInteger()" />
+    <h3>Bài 7: Đổi chỗ 2 số</h3>
+    <input type="button" value="Change Place" onclick="changPlace()" /> <br />
+    <p id="num1"></p>
+    <p id="num2"></p>
+    <h3>Bài 8 : Đảo ngược mảng số nguyên</h3>
+    <input type="button" value="Click here to reverse" onclick="reverseArray()" />
+    <p id="array"></p>
+    <p id="newArray"></p>
+    <h3>Bài 9:</h3>
+    <input type="button" value="Check Frequency" onclick="checkFrequency()" />
+    <script src="luyentap02.js"></script>
+</body>
+
+</html>
